@@ -42,15 +42,17 @@ public class TodoServiceImpl implements TodoService {
     }
 
     public void remove(int id) {
-//        Todo todo = new Todo(id);
-//        for (Todo t : todos) {
-//        }
-//        if (t.getId() == id) {
-//            remove(id);
-//        }
+        Todo todo = new Todo(id);
+        for (Todo t : todos) {
+            if (t.getId() == id) {
+                this.todos.remove(todo);
+            }
+        }
     }
 
     public void toggleDone(int id) {
+
+
 
     }
 

@@ -1,6 +1,4 @@
 package org.example;
-
-
 import org.example.ihm.Ihm;
 import org.example.model.TodoServiceImpl;
 import org.example.service.TodoService;

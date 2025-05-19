@@ -1,9 +1,6 @@
 package org.example.ihm;
-
-import org.example.model.Todo;
 import org.example.model.TodoServiceImpl;
 import org.example.service.TodoService;
-
 import java.util.Scanner;
 
 public class Ihm {
