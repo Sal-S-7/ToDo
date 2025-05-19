@@ -3,8 +3,13 @@ package org.example.model;
 public class Todo {
     private int id;
     private String name;
-    private char description;
-    private boolean done;
+    private String description;
+    private boolean done = false;
+
+    public Todo(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
     public int getId() {
         return id;
@@ -22,12 +27,12 @@ public class Todo {
         this.name = name;
     }
 
-    public char getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(char description) {
-        this.description = description;
+    public void setDescription(String description) {
+        this.description = String.valueOf(description);
     }
 
     public boolean isDone() {
@@ -36,5 +41,15 @@ public class Todo {
 
     public void setDone(boolean done) {
         this.done = done;
+    }
+
+    @Override
+    public String toString() {
+        return "Todo{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", done=" + done +
+                '}';
     }
 }

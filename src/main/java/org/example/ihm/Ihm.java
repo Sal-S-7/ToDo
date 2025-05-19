@@ -1,6 +1,7 @@
 package org.example.ihm;
 
 import org.example.model.Todo;
+import org.example.model.TodoServiceImpl;
 import org.example.service.TodoService;
 
 import java.util.Scanner;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 public class Ihm {
     private final TodoService service;
     private final Scanner scanner;
+    TodoServiceImpl todoImpl = new TodoServiceImpl();
 
     public Ihm(TodoService service) {
         this.service = service;
@@ -47,12 +49,12 @@ public class Ihm {
         System.out.print("Description : ");
         String description = scanner.nextLine();
         service.add(name, description);
-        System.out.println("Tâche ajoutée !");
+        System.out.println("Tâche Ajoutée !");
     }
 
     private void showAll() {
         System.out.println("\nListe des tâches :");
-        for (Todo todo : service.getAll()) {
+        for (String todo : service.getAll()) {
             System.out.println(todo);
         }
     }
